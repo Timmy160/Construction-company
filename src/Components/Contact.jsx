@@ -3,17 +3,22 @@ import React from "react";
 const Contact = () => {
   return (
     <section
-      id="contact"
+      id="contactus"
       className="py-20 px-6 md:px-12 bg-[rgba(255,255,255,0.95)] text-[#1A362B]"
        style={{ marginTop: '-80px' }}
     >
       <div className="max-w-2xl mx-auto bg-[rgba(255,255,255,0.95)] rounded-2xl shadow-lg p-8 md:p-10">
         {/* Header */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-[#1A362B]">
+          <h2 
+          style={{ fontFamily: '"M PLUS 1", sans-serif' }} // ✅ added font here
+          className="text-3xl sm:text-4xl font-bold mb-4 text-[#1A362B]">
             Get In Touch With Us
           </h2>
-          <p className="text-gray-600">
+
+          <p 
+          style={{ fontFamily: '"Inter", sans-serif' }}
+          className="text-gray-600">
             Email Address:{" "}
             <span className="font-semibold text-[#1B2431]">
               companyname@gmail.com
@@ -21,12 +26,15 @@ const Contact = () => {
             · Phone Number:{" "}
             <span className="font-semibold text-[#1B2431]">+1234455666</span>
           </p>
+
         </div>
 
         {/* Form */}
         <form className="space-y-6">
           {/* Name Fields */}
-          <div className="grid md:grid-cols-2 gap-4">
+          <div 
+          style={{ fontFamily: '"Inter", sans-serif' }}
+          className="grid md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium mb-2 text-[#1A362B]">
                 First Name
@@ -80,11 +88,12 @@ const Contact = () => {
           {/* Button */}
           <div className="text-right">
             <button
-            type="submit"
-          className="h-11 px-8 rounded-md border border-white text-white font-medium 
-           bg-[#1B2431] hover:bg-white hover:text-[#1B2431] transition-all duration-300"
+           style={{ fontFamily: '"M PLUS 1", sans-serif' }} // ✅ added font here
+           type="submit"
+           className="h-11 px-8 rounded-xl border border-white text-white font-medium 
+           bg-[#1B2431] hover:bg-white hover:text-[#1B2431] transition-all duration-300 cursor-pointer"
         >
-          See Your Services
+          Send Message
         </button>
           </div>
         </form>

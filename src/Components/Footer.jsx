@@ -7,15 +7,20 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-2">Company Name</h3>
-            <p className="text-sm text-gray-300">
+            <h3 
+            style={{ fontFamily: '"M PLUS 1", sans-serif' }} // ✅ added font here
+            className="text-xl font-bold mb-2">Company Name</h3>
+            <p style={{ fontFamily: '"M PLUS 1", sans-serif' }} // ✅ added font here
+            className="text-sm text-gray-300">
               Build with Confidence, Create with Excellence.
             </p>
           </div>
 
           {/* Navigation Links */}
           <div>
-            <ul className="space-y-2">
+            <ul 
+            style={{ fontFamily: '"M PLUS 1", sans-serif' }} // ✅ added font here
+            className="space-y-2 text-sm text-gray-300">
               <li>
                 <a
                   href="#about"
@@ -53,8 +58,8 @@ const Footer = () => {
 
           {/* Social Media */}
           <div>
-            <h4 className="font-semibold mb-4">Follow Us</h4>
-            <div className="flex gap-4">
+            <h4 className="font-semibold mb-4 text-sm text-gray-300">Social Media</h4>
+            <div className="flex gap-4 text-sm text-gray-300">
               <a href="#" className="hover:text-[#94BD0A] transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>

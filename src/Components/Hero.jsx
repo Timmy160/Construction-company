@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       className="relative min-h-[520px] flex items-center justify-center bg-center bg-cover bg-no-repeat"
-      style={{ backgroundImage: `url(${HeroImg})` }}
+      style={{ backgroundImage: `url(${HeroImg})`, fontFamily: '"M PLUS 1", sans-serif' }}
     >
       {/* 🔥 Animated Overlay (fades in softly before text) */}
       <motion.div
@@ -51,7 +51,7 @@ const Hero = () => {
             ease: "easeOut",
           }}
           className="h-11 px-8 rounded-md border border-white text-white font-medium 
-          bg-[#1B2431] hover:bg-white hover:text-[#1B2431] transition-all duration-300"
+          bg-[#1B2431] hover:bg-white hover:text-[#1B2431] transition-all duration-300 cursor-pointer" 
         >
           See Your Services
         </motion.button>

@@ -40,10 +40,14 @@ const Gallery = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6 mb-10">
           <div className="text-center sm:text-left">
-            <p className="text-[#000000] text-sm uppercase mb-2 tracking-wide">
+            <p 
+            style={{ fontFamily: '"Poppins", sans-serif' }}
+            className="text-[#000000] text-sm uppercase mb-2 tracking-wide">
               Our Works
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold">Gallery</h2>
+            <h2 
+            style={{ fontFamily: '"M PLUS 1", sans-serif' }} // ✅ added font here
+            className="text-3xl sm:text-4xl font-bold">Gallery</h2>
           </div>
 
           {/* Controls (visible only on mobile) */}
