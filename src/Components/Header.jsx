@@ -54,7 +54,7 @@ const Header = () => {
             animate={{ y: 0 }}
             exit={{ y: "-100%" }}
             transition={{ type: "spring", stiffness: 80, damping: 20 }}
-            className="fixed inset-0 bg-white text-black flex flex-col items-start justify-start gap-8 text-2xl font-semibold px-8 pt-24 z-40"
+            className="fixed inset-0 bg-white text-black flex flex-col items-start justify-start gap-8 text-m font-semibold px-8 pt-24 z-40"
           >
             {["About Us", "Our Services", "Gallery", "Contact Us"].map(
               (label, i) => (
