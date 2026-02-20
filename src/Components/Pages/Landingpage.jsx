@@ -8,6 +8,7 @@ import CTA from '../CTA';
 import Gallery from '../Gallery';
 import Contact  from '../Contact';
 import Footer from '../Footer';
+import MachineryListings from '../MachineryListings';
 
 function Landingpage() {
   return (
@@ -17,6 +18,7 @@ function Landingpage() {
       <About />
       <Features />
       <Services />
+      <MachineryListings />
       <CTA />
       <Gallery />
       <Contact />

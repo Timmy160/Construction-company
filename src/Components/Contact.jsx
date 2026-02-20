@@ -21,10 +21,8 @@ const Contact = () => {
           className="text-gray-600">
             Email Address:{" "}
             <span className="font-semibold text-[#1B2431]">
-              companyname@gmail.com
+              info@eliterentalhub.com
             </span>{" "}
-            · Phone Number:{" "}
-            <span className="font-semibold text-[#1B2431]">+1234455666</span>
           </p>
 
         </div>

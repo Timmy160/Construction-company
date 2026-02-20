@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <h3 
             style={{ fontFamily: '"M PLUS 1", sans-serif' }} // ✅ added font here
-            className="text-xl font-bold mb-2">Company Name</h3>
+            className="text-xl font-bold mb-2">Elliterentalhub</h3>
             <p style={{ fontFamily: '"M PLUS 1", sans-serif' }} // ✅ added font here
             className="text-sm text-gray-300">
               Build with Confidence, Create with Excellence.
@@ -60,25 +60,18 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-sm text-gray-300">Social Media</h4>
             <div className="flex gap-4 text-sm text-gray-300">
-              <a href="#" className="hover:text-[#94BD0A] transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="hover:text-[#94BD0A] transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="hover:text-[#94BD0A] transition-colors">
+              
+              <a href="https://www.instagram.com/eliterentalhub?igsh=MXMxM3Noa2o1dmJyaQ==" className="hover:text-[#94BD0A] transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="hover:text-[#94BD0A] transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
+               
             </div>
           </div>
         </div>
 
         {/* Divider and Footer Note */}
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-400">
-          © {new Date().getFullYear()} Company Name. All rights reserved.
+          © {new Date().getFullYear()} Elliterentalhub. All rights reserved.
         </div>
       </div>
     </footer>
