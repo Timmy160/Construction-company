@@ -64,7 +64,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.35, ease: "easeOut" }}
-            className="fixed inset-0 bg-[#1A362B]/95 backdrop-blur-sm text-white flex flex-col items-center justify-center gap-12 text-2xl font-semibold z-40"
+            className="fixed inset-0 bg-gray-700/90 backdrop-blur-sm text-white flex flex-col items-center justify-center gap-12 text-2xl font-semibold z-40"
           >
             {["About Us", "Our Services", "Gallery", "Contact Us"].map((label, i) => (
               <motion.a
