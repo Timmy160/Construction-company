@@ -37,9 +37,9 @@ const Hero = () => {
           }}
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-snug md:leading-tight"
         >
-          Professional <br />
-          Construction Services <br />
-          For Your Needs
+          Reliable Equipment <br />
+          Rental Solutions <br />
+          For Every Project
         </motion.h1>
 
         <motion.button
@@ -53,7 +53,7 @@ const Hero = () => {
           className="h-11 px-8 rounded-md border border-white text-white font-medium 
           bg-[#1B2431] hover:bg-white hover:text-[#1B2431] transition-all duration-300 cursor-pointer" 
         >
-          See Your Services
+          Browse Our Fleet
         </motion.button>
       </motion.div>
     </section>
