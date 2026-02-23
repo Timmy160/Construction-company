@@ -4,7 +4,7 @@ import WheelLoader from "../assets/IMG/Wheel.jpg";
 import Hydraulic from "../assets/IMG/Hydraulic.jpg";
 import ForkLift from "../assets/IMG/ForkLift.jpg";
 import Tractor from "../assets/IMG/Tractor.jpg";
-import Dozer from "../assets/IMG/Dozerr.jpg";
+import Dozer from "../assets/IMG/Dozer.jpg";
 import Grader from "../assets/IMG/grader.jpg";
 import Roller from "../assets/IMG/Roller.jpg";
 import Loader from "../assets/IMG/Loader.jpg";
