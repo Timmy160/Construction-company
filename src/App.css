@@ -1,7 +1,27 @@
 @import "tailwindcss";
 
 
-html{
-  overflow-x: hidden;
+html {
   scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* Make sure your gallery scroll works */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Optional: improve mobile horizontal scroll feel */
+section#gallery .overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory; /* optional snap effect */
 }
