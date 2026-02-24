@@ -61,7 +61,7 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 1.4, delay: 0.9, ease: "easeOut" }}
             >
-              Elliterentalhub provides reliable, high-quality construction machinery rental services. Our well-maintained fleet supports construction, infrastructure, industrial, and agricultural projects, helping clients complete work on time and on budget.
+              Eliterentalhub provides reliable, high-quality construction machinery rental services. Our well-maintained fleet supports construction, infrastructure, industrial, and agricultural projects, helping clients complete work on time and on budget.
             </motion.p>
 
             {/* Mission & Vision */}
