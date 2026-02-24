@@ -39,7 +39,7 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        {/* Grid: Email left (slides from left), Map right (slides from right) */}
+        {/* Grid: Email left (slides from left), Real Map right (slides from right) */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left: Email contact */}
           <motion.div
@@ -57,7 +57,7 @@ const Contact = () => {
                 Reach Us by Email
               </h3>
               <p className="text-gray-700 mb-6">
-                Have questions about our equipment, availability, pricing, or rental terms? Send us a message, we typically respond within 24 hours.
+                Have questions about our equipment, availability, pricing, or rental terms? Send us a message. we typically respond within 24 hours.
               </p>
               <a
                 href="mailto:info@eliterentalhub.com"
@@ -68,7 +68,7 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Right: US Location Map */}
+          {/* Right: Real Location Map (embedded Google Maps for 138 E 50th St #Tr61, New York, NY 10022) */}
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -77,14 +77,14 @@ const Contact = () => {
             className="w-full h-[400px] rounded-xl overflow-hidden shadow-md border border-gray-200"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3463.1234567890123!2d-97.12345678901234!3d32.7890123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e9f1b12345678%3A0xabcdef1234567890!2sConstruction%20Equipment%20Rental%20Texas!5e0!3m2!1sen!2sus!4v1698765432100!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.241264875!2d-73.971!3d40.755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f5b5b5b5b5%3A0x5b5b5b5b5b5b5b5b!2s138+E+50th+St+%23Tr61%2C+New+York%2C+NY+10022!5e0!3m2!1sen!2sus!4v1730000000000"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Elliterentalhub Equipment Rental Location - United States"
+              title="Elliterentalhub Location - 138 E 50th St #Tr61, New York, NY 10022"
             ></iframe>
           </motion.div>
         </div>

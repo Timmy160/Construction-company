@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
+// All your image imports (kept exactly as you have them)
 import WheelLoader from "../assets/IMG/Wheel.jpg";
 import Hydraulic from "../assets/IMG/Hydraulic.jpg";
 import ForkLift from "../assets/IMG/ForkLift.jpg";
@@ -34,9 +36,12 @@ function MachineryListings() {
   const [openCategory, setOpenCategory] = useState("Construction");
   const [selectedMachine, setSelectedMachine] = useState(null);
 
+  // Ref object to store references to each category div (ONLY DECLARED ONCE)
+  const categoryRefs = useRef({});
+
   const machineryData = {
     Construction: [
-      // Your original machines – untouched
+      // All 10 machines (your original + added ones) – unchanged
       {
         id: 1,
         name: "Hydraulic Excavator (20 Ton)",
@@ -57,8 +62,6 @@ function MachineryListings() {
         details:
           "Bucket capacity: 3 m³ • Operating weight: 17,500 kg • Engine: 200 hp • Tipping load: 11,000 kg",
       },
-
-      // New machines added to reach 10 total
       {
         id: 3,
         name: "Crawler Dozer (D8 Class)",
@@ -109,7 +112,6 @@ function MachineryListings() {
         details:
           "Payload capacity: 25,000 kg • Engine power: 320 hp • Heaped capacity: 15 m³",
       },
-      
       {
         id: 9,
         name: "Tower Crane (QTZ 63)",
@@ -133,7 +135,6 @@ function MachineryListings() {
     ],
 
     Industrial: [
-      // Your original machine – untouched
       {
         id: 5,
         name: "Rough Terrain Forklift (5 Ton)",
@@ -144,8 +145,6 @@ function MachineryListings() {
         details:
           "Load capacity: 5,000 kg • Lift height: 6 m • 4WD • Diesel engine",
       },
-
-      // New machines added to reach 10 total
       {
         id: 11,
         name: "Telescopic Handler (4 Ton / 17m)",
@@ -158,7 +157,7 @@ function MachineryListings() {
       },
       {
         id: 12,
-        name: "Industrial Diesel Generator  ",
+        name: "Industrial Diesel Generator",
         description:
           "High-capacity standby/prime power generator for factories, events, and construction sites.",
         price: "$420 / day",
@@ -168,7 +167,7 @@ function MachineryListings() {
       },
       {
         id: 13,
-        name: "Air Compressor ",
+        name: "Air Compressor",
         description:
           "Portable diesel air compressor for powering pneumatic tools and sandblasting.",
         price: "$280 / day",
@@ -178,7 +177,7 @@ function MachineryListings() {
       },
       {
         id: 14,
-        name: "Scissor Lift  ",
+        name: "Scissor Lift",
         description:
           "Battery-powered scissor lift for indoor/outdoor maintenance and installation work.",
         price: "$320 / day",
@@ -206,10 +205,9 @@ function MachineryListings() {
         details:
           "Output current: 60–400 A • Duty cycle: 60% • 10 kVA auxiliary power",
       },
-      
       {
         id: 18,
-        name: "Material Hoist ",
+        name: "Material Hoist",
         description:
           "Rack-and-pinion hoist for lifting materials to upper floors in industrial plants.",
         price: "$750 / day",
@@ -240,7 +238,6 @@ function MachineryListings() {
     ],
 
     Agricultural: [
-      // Your original machine – untouched
       {
         id: 8,
         name: "Tractor (80 HP)",
@@ -251,8 +248,6 @@ function MachineryListings() {
         details:
           "Engine power: 80 hp • 4WD • PTO: 540/1000 rpm • 3-point hitch Category II",
       },
-
-      // New machines added to reach 10 total
       {
         id: 21,
         name: "Combine Harvester (Small Grain)",
@@ -265,7 +260,7 @@ function MachineryListings() {
       },
       {
         id: 22,
-        name: "Disc Harrow  ",
+        name: "Disc Harrow",
         description:
           "Heavy-duty offset disc harrow for primary tillage and soil preparation.",
         price: "$320 / day",
@@ -273,7 +268,6 @@ function MachineryListings() {
         details:
           "Working width: 3 m • Disc diameter: 660 mm • Tractor power required: 80–120 hp",
       },
-      
       {
         id: 24,
         name: "Sprayer (Boom 24m)",
@@ -286,7 +280,7 @@ function MachineryListings() {
       },
       {
         id: 25,
-        name: "Rotary Tiller ",
+        name: "Rotary Tiller",
         description:
           "Heavy-duty rotary tiller for seedbed preparation and weed control.",
         price: "$260 / day",
@@ -306,7 +300,7 @@ function MachineryListings() {
       },
       {
         id: 27,
-        name: "Mower-Conditioner  ",
+        name: "Mower-Conditioner",
         description:
           "High-speed disc mower-conditioner for cutting and conditioning forage crops.",
         price: "$520 / day",
@@ -350,7 +344,19 @@ function MachineryListings() {
   const categories = ["Construction", "Industrial", "Agricultural"];
 
   const toggleCategory = (category) => {
-    setOpenCategory(openCategory === category ? null : category);
+    const isOpening = openCategory !== category;
+
+    setOpenCategory(isOpening ? category : null);
+
+    // Scroll to top of the category when opening
+    if (isOpening && categoryRefs.current[category]) {
+      setTimeout(() => {
+        categoryRefs.current[category].scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 150);
+    }
   };
 
   const openModal = (machine) => {
@@ -374,7 +380,7 @@ function MachineryListings() {
         transition={{ duration: 1.4 }}
         className="container mx-auto"
       >
-        {/* Header – fades and slides up */}
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -399,11 +405,12 @@ function MachineryListings() {
           </p>
         </motion.div>
 
-        {/* Accordion Categories – staggered slide up */}
+        {/* Categories */}
         <div className="space-y-6">
           {categories.map((category, catIndex) => (
             <motion.div
               key={category}
+              ref={(el) => (categoryRefs.current[category] = el)}
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -486,7 +493,7 @@ function MachineryListings() {
           ))}
         </div>
 
-        {/* Modal – scale + fade entrance */}
+        {/* Modal */}
         <AnimatePresence>
           {selectedMachine && (
             <motion.div

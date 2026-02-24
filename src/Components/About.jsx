@@ -4,6 +4,13 @@ import { motion } from "framer-motion";
 const About = () => {
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
 
+  const handleContactClick = () => {
+    document.getElementById("contactus")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <section
       id="aboutus"
@@ -141,6 +148,7 @@ const About = () => {
             </motion.div>
           </motion.div>
 
+          {/* Button – now scrolls to #contactus */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -150,6 +158,12 @@ const About = () => {
           >
             <button
               type="button"
+              onClick={() => {
+                document.getElementById("contactus")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }}
               className="h-11 px-8 rounded-md border border-white text-white font-medium bg-[#1B2431] hover:bg-white hover:text-[#1B2431] transition-all duration-300 cursor-pointer"
               style={{ fontFamily: '"M PLUS 1", sans-serif' }}
             >

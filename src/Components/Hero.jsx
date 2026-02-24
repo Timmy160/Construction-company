@@ -3,12 +3,19 @@ import { motion } from "framer-motion";
 import HeroImg from "../assets/IMG/hero.png";
 
 const Hero = () => {
+  const handleBrowseClick = () => {
+    document.getElementById("machinery")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start", // scrolls so the section starts at the top of the viewport
+    });
+  };
+
   return (
     <section
       className="relative min-h-[520px] flex items-center justify-center bg-center bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${HeroImg})`, fontFamily: '"M PLUS 1", sans-serif' }}
     >
-      {/* 🔥 Animated Overlay (fades in softly before text) */}
+      {/* 🔥 Animated Overlay */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.45 }}
@@ -23,7 +30,7 @@ const Hero = () => {
         transition={{
           duration: 1,
           ease: "easeOut",
-          delay: 0.8, // starts after overlay fades in
+          delay: 0.8,
         }}
         className="relative z-10 text-center px-6 py-2 md:py-12 text-white"
       >
@@ -50,8 +57,9 @@ const Hero = () => {
             duration: 0.8,
             ease: "easeOut",
           }}
+          onClick={handleBrowseClick} // ← Added smooth scroll to #machinery
           className="h-11 px-8 rounded-md border border-white text-white font-medium 
-          bg-[#1B2431] hover:bg-white hover:text-[#1B2431] transition-all duration-300 cursor-pointer" 
+          bg-[#1B2431] hover:bg-white hover:text-[#1B2431] transition-all duration-300 cursor-pointer"
         >
           Browse Our Fleet
         </motion.button>

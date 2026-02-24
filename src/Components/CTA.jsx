@@ -2,6 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const CTA = () => {
+  const handleContactClick = () => {
+    document.getElementById("contactus")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <motion.section
       id="cta"
@@ -32,7 +39,7 @@ const CTA = () => {
           transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.98 }}
-          href="#contactus"
+          onClick={handleContactClick} // ← Added smooth scroll to #contactus
           style={{ fontFamily: '"M PLUS 1", sans-serif' }}
           className="h-11 px-8 rounded-md border border-white text-white font-medium 
           hover:bg-white hover:text-[#1B2431] transition-all duration-300 cursor-pointer"
