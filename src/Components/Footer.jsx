@@ -98,7 +98,7 @@ const Footer = () => {
           transition={{ duration: 1.3, delay: 0.8, ease: "easeOut" }}
           className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-400"
         >
-          © {new Date().getFullYear()} Elliterentalhub – Construction Equipment Rental. All rights reserved.
+          © {new Date().getFullYear()} Eliterentalhub – Construction Equipment Rental. All rights reserved.
         </motion.div>
       </div>
     </motion.footer>
