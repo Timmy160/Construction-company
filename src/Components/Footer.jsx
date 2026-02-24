@@ -22,7 +22,7 @@ const Footer = () => {
           >
             <h3 
               style={{ fontFamily: '"M PLUS 1", sans-serif' }}
-              className="text-xl font-bold mb-2">Elliterentalhub</h3>
+              className="text-xl font-bold mb-2">Eliterentalhub</h3>
             <p style={{ fontFamily: '"M PLUS 1", sans-serif' }}
               className="text-sm text-gray-300">
               Your Trusted Partner for Reliable Construction Equipment Rental
