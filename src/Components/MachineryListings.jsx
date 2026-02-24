@@ -11,7 +11,6 @@ import Grader from "../assets/IMG/Grader.jpg";
 import Roller from "../assets/IMG/Roller.jpg";
 import Loader from "../assets/IMG/Loader.jpg";
 import Truck from "../assets/IMG/Truck.jpg";
-import Crane from "../assets/IMG/Crane.jpg";
 import Digger from "../assets/IMG/Digger.jpg";
 import Handler from "../assets/IMG/Handler.jpg";
 import Generator from "../assets/IMG/Generator.jpg";
@@ -111,16 +110,6 @@ function MachineryListings() {
         image: Truck,
         details:
           "Payload capacity: 25,000 kg • Engine power: 320 hp • Heaped capacity: 15 m³",
-      },
-      {
-        id: 9,
-        name: "Tower Crane (QTZ 63)",
-        description:
-          "Stationary tower crane for lifting heavy materials on mid-rise construction sites.",
-        price: "$1,800 / day",
-        image: Crane,
-        details:
-          "Max load: 6 tons • Jib length: 50 m • Max height under hook: 40 m",
       },
       {
         id: 10,
