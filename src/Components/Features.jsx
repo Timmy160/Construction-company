@@ -52,7 +52,7 @@ const Features = () => {
             style={{ fontFamily: '"M PLUS 1", sans-serif' }}
             className="text-3xl sm:text-4xl md:text-5xl font-bold"
           >
-            Why Rent With Elliterentalhub
+            Why Rent With Eliterentalhub
           </motion.h2>
         </div>
 
